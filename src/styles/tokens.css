@@ -1,0 +1,77 @@
+:root {
+  /* Brand Palette */
+  --color-primary: #000000;
+  --color-secondary: #FFFFFF;
+  --color-accent: #000000;
+  --color-accent-subtle: #2C68FF;
+
+  /* Neutral Greys */
+  --color-grey-50: #FAFAFA;
+  --color-grey-100: #F8F8F8;
+  --color-grey-200: #F2F2F2;
+  --color-grey-300: #E9E9E9;
+  --color-grey-400: #CFCFCF;
+  --color-grey-500: #8E8E93;
+  --color-grey-600: #666666;
+  --color-grey-700: #444444;
+  --color-grey-800: #222222;
+  --color-grey-900: #111111;
+
+  --color-border: #E5E5E5;
+  --color-border-light: #F0F0F0;
+  --color-border-dark: #222222;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F8F8F8;
+  --color-text-main: #000000;
+  --color-text-muted: #666666;
+  --color-text-subtle: #8E8E93;
+  --color-text-inverted: #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-brand: 'Quando', serif;
+  --font-script: 'Style Script', cursive;
+
+  /* Spacing Rhythm */
+  --spacing-section-desktop: 120px;
+  --spacing-section-tablet: 80px;
+  --spacing-section-mobile: 56px;
+
+  --spacing-gutter: 24px;
+  --container-max-width: 1280px;
+  --container-padding-desktop: 80px;
+  --container-padding-tablet: 32px;
+  --container-padding-mobile: 20px;
+
+  --paragraph-max-width: 620px;
+
+  /* Border Radii */
+  --radius-button: 999px;
+  --radius-card: 0px;
+  --radius-image: 0px;
+  --radius-banner: 0px;
+  --radius-input: 12px;
+  --radius-search: 999px;
+  --radius-tag: 999px;
+  --radius-badge: 999px;
+
+  /* Shadows - Minimal & Spacing Based */
+  --shadow-none: none;
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 16px 40px rgba(0, 0, 0, 0.09);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.16);
+
+  /* Transitions & Ease */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 400ms;
+
+  /* Nav Heights */
+  --nav-top-height: 40px;
+  --nav-main-height: 72px;
+  --header-total-height: 112px;
+}

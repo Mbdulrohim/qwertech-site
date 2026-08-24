@@ -1,0 +1,100 @@
+/* Stories & Buying Guides Styles */
+.stories-section {
+  width: 100%;
+  background-color: var(--color-surface);
+}
+
+.section-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.stories-slider-viewport {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 0 16px;
+}
+
+.stories-slider-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.stories-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.story-card {
+  width: 300px;
+  background-color: var(--color-grey-100);
+  border-radius: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out);
+}
+
+.story-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.story-card-thumb {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--color-grey-200);
+}
+
+.story-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.story-card-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0A84FF;
+  margin-bottom: 6px;
+}
+
+.story-card-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+
+.story-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.story-card-link {
+  margin-top: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

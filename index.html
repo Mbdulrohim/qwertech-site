@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>QwerTech Global Communications | iPhones, Samsungs, Pixels, MacBooks, Gaming & Deals</title>
+  <meta name="description" content="QwerTech Global Communications - Nigeria's premier gadget store for brand new & tested pre-owned iPhones, Samsung Galaxy, Google Pixels, MacBooks, iMacs, gaming consoles, and daily deals in Naira.">
+
+  <!-- Browser Tab Favicon (QwerTech Logo) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/images/qwertech-logo.svg">
+  <link rel="apple-touch-icon" href="/images/qwertech-logo.svg">
+
+  <!-- Google Fonts: Quando (Brand), Style Script (Subtitle), Montserrat (Headings) & Inter (Body/Buttons/Nav) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Quando&family=Style+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       CINEMATIC SPLASH SCREEN (LUXURY WHITE EDITION)
+       ========================================================================== -->
+  <div class="splash-screen" id="splash-screen">
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img src="/images/qwertech-logo.svg" alt="QwerTech Logo" class="splash-logo-img">
+      </div>
+      <div class="splash-wordmark">
+        <span class="splash-title">QWERTECH</span>
+        <span class="splash-subtitle">Global Communications</span>
+      </div>
+      <div class="splash-loader-bar">
+        <div class="splash-loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION (Samsung 1:1 Clean Hierarchy with Official Logo)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <!-- Main Navigation Bar (72px) -->
+    <nav class="site-container nav-main-bar" aria-label="Main Navigation">
+      <a href="#" class="nav-brand-logo" aria-label="QwerTech Global Communications">
+        <img src="/images/qwertech-logo.svg" alt="QwerTech Logo" class="brand-logo-img">
+        <div class="brand-wordmark-wrap">
+          <span class="brand-title">QWERTECH</span>
+          <span class="brand-subtitle">Global Communications</span>
+        </div>
+      </a>
+
+      <!-- Desktop Center Menu Items -->
+      <ul class="nav-center-menu">
+        <li class="nav-menu-item" data-category="iphones">
+          <a href="#iphones" class="nav-link">iPhones</a>
+        </li>
+        <li class="nav-menu-item" data-category="samsung">
+          <a href="#samsung" class="nav-link">Samsung</a>
+        </li>
+        <li class="nav-menu-item" data-category="google-pixel">
+          <a href="#samsung" class="nav-link">Google Pixel</a>
+        </li>
+        <li class="nav-menu-item" data-category="macbooks-imacs">
+          <a href="#laptops" class="nav-link">MacBooks & iMacs</a>
+        </li>
+        <li class="nav-menu-item" data-category="gaming-tablets">
+          <a href="#gaming" class="nav-link">Gaming & Tablets</a>
+        </li>
+        <li class="nav-menu-item" data-category="deals">
+          <a href="#deals-spotlight" class="nav-link" style="color: #0A84FF; font-weight: 600;">Daily & Weekly Deals</a>
+        </li>
+      </ul>
+
+      <!-- Right Action Icons: WhatsApp, Search, and Cart (Numeric Badge) -->
+      <div class="nav-actions">
+        <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="icon-btn" aria-label="WhatsApp Support" title="Chat on WhatsApp" style="color: #25D366;">
+          <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
+        </a>
+        <button class="icon-btn" id="search-open-btn" aria-label="Search devices (Cmd+K)" title="Search Devices (Cmd+K)">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+        <button class="icon-btn" id="cart-open-btn" aria-label="Shopping Bag" title="Shopping Bag">
+          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          <span class="badge-count cart-badge-count">1</span>
+        </button>
+        <button class="icon-btn nav-mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+        </button>
+      </div>
+
+      <!-- Mega Menu Dropdown Container -->
+      <div class="mega-menu-panel" id="mega-menu-panel">
+        <div id="mega-menu-content"></div>
+      </div>
+    </nav>
+
+    <!-- Dynamic Promo Bar (Positioned BELOW the Main Navigation) -->
+    <div class="nav-promo-bar">
+      <div class="nav-promo-ticker" id="nav-promo-ticker">
+        ⚡ DAILY MOLOORE DEALS LIVE: Save up to ₦150,000 on Certified Pre-Owned iPhones & MacBooks | Free Ilorin Delivery over ₦200,000
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer (Off-Canvas Hidden Modal) -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <div style="display: flex; align-items: center; gap: 10px; height: 38px;">
+          <img src="/images/qwertech-logo.svg" alt="QwerTech Logo" style="height: 38px; width: auto;">
+          <div class="brand-wordmark-wrap" style="height: 38px;">
+            <span class="brand-title" style="font-size: 1.25rem;">QWERTECH</span>
+            <span class="brand-subtitle" style="font-size: 1rem;">Global Communications</span>
+          </div>
+        </div>
+        <button class="apple-close-circle-btn" id="mobile-drawer-close" aria-label="Close navigation">
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-title">
+            <span>iPhones & Apple</span>
+            <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i>
+          </div>
+          <ul class="mobile-submenu-list">
+            <li><a href="#iphones" class="mobile-submenu-link">iPhone 16 Pro Max</a></li>
+            <li><a href="#iphones" class="mobile-submenu-link">Pre-Owned iPhones (Grade A+)</a></li>
+            <li><a href="#hero-slider" class="mobile-submenu-link">iPhone 18 Coming Soon Hub</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-title">
+            <span>Samsung & Google Pixel</span>
+            <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i>
+          </div>
+          <ul class="mobile-submenu-list">
+            <li><a href="#samsung" class="mobile-submenu-link">Galaxy S24 Ultra</a></li>
+            <li><a href="#samsung" class="mobile-submenu-link">Galaxy Z Flip6</a></li>
+            <li><a href="#samsung" class="mobile-submenu-link">Google Pixel 9 Pro XL</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-title">
+            <span>MacBooks & Laptops</span>
+            <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i>
+          </div>
+          <ul class="mobile-submenu-list">
+            <li><a href="#laptops" class="mobile-submenu-link">MacBook Pro M3 Max</a></li>
+            <li><a href="#laptops" class="mobile-submenu-link">MacBook Air 15" M3</a></li>
+            <li><a href="#laptops" class="mobile-submenu-link">iMac 24" Retina</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-title">
+            <span>Gaming & Tablets</span>
+            <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i>
+          </div>
+          <ul class="mobile-submenu-list">
+            <li><a href="#gaming" class="mobile-submenu-link">Sony PS5 Slim</a></li>
+            <li><a href="#gaming" class="mobile-submenu-link">Steam Deck OLED</a></li>
+            <li><a href="#gaming" class="mobile-submenu-link">iPad Pro M4</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-title">
+            <a href="#deals-spotlight" style="color: inherit;">Daily Moloore & Weekly Deals</a>
+            <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-footer">
+        <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+          <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp Order / Support
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: 32px MEDIUM MONTSERRAT H1 / CLEAN DOTS (NO CHEVRONS, NO EYEBROWS)
+         ========================================================================== -->
+    <section class="hero-slider-section" id="hero-slider">
+      <div class="hero-slider-viewport">
+        <!-- Slide 1: Flagship iPhones & iPhone 18 Coming Soon -->
+        <div class="hero-slide active">
+          <img src="/images/hero-mobile.jpg" alt="iPhone 16 Pro and Flagship Phones in Hand" class="hero-slide-bg">
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <h1 class="hero-slide-title">iPhone 18 Coming Soon</h1>
+            <p class="hero-slide-subtitle">
+              Pre-register now for exclusive Nigerian early VIP allocation. Shop the latest iPhone 16 Pro Max and Grade A+ certified pre-owned phones in stock.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+              <a href="#iphones" class="btn btn-dark-hero">Shop iPhones</a>
+              <a href="#newsletter" class="btn btn-dark-outline">Pre-Register for iPhone 18</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Daily Moloore & Weekly Deals -->
+        <div class="hero-slide">
+          <img src="/images/hero-keynote.jpg" alt="QwerTech Weekly Flash Deals" class="hero-slide-bg">
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <h1 class="hero-slide-title">Stay Tuned for Weekly Deals</h1>
+            <p class="hero-slide-subtitle">
+              Save up to ₦150,000 on tested pre-owned gadgets, flagship Samsungs, MacBooks, and gaming accessories with store warranty.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+              <a href="#deals-spotlight" class="btn btn-dark-hero">Explore Today's Deals</a>
+              <a href="#perks" class="btn btn-dark-outline">Device Swap & Trade-In</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: MacBooks, iMacs & Gaming Gadgets -->
+        <div class="hero-slide">
+          <img src="/images/hero-displays.jpg" alt="MacBooks and Gaming Displays" class="hero-slide-bg">
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content">
+            <h1 class="hero-slide-title">MacBooks, iMacs & PS5</h1>
+            <p class="hero-slide-subtitle">
+              Unrivaled M3 Max computing, 4.5K Retina iMacs, PS5 Slim, and handheld gaming consoles ready for same-day delivery in Ilorin and nationwide dispatch across Nigeria.
+            </p>
+            <div class="btn-group" style="justify-content: center;">
+              <a href="#laptops" class="btn btn-dark-hero">Shop MacBooks</a>
+              <a href="#gaming" class="btn btn-dark-outline">Shop Gaming Gear</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clean Dots Only Indicator (No Chevrons) -->
+      <div class="hero-slider-nav">
+        <div class="hero-dot active" data-index="0"></div>
+        <div class="hero-dot" data-index="1"></div>
+        <div class="hero-dot" data-index="2"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DEALS SECTION: DAILY MOLOORE & WEEKLY MEGA ONES
+         ========================================================================== -->
+    <section class="deals-spotlight-section" id="deals-spotlight">
+      <div class="site-container">
+        <div class="deals-header-row">
+          <div>
+            <span class="campaign-tag" style="color: #E53E3E; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 6px;">⚡ Limited Daily Moloore & Weekly Mega Offers</span>
+            <h2 style="font-size: 26px; font-weight: 600;">Daily & Weekly Deals</h2>
+          </div>
+          <div class="deals-tabs">
+            <button class="deals-tab-btn active" data-deal-type="all">All Deals</button>
+            <button class="deals-tab-btn" data-deal-type="daily">🔥 Daily Moloore</button>
+            <button class="deals-tab-btn" data-deal-type="weekly">⚡ Weekly Mega</button>
+          </div>
+        </div>
+
+        <!-- Deals 4-Product Sub-Strip (Clean: Just Name, Price, and 1 Buy Now CTA) -->
+        <div class="product-grid-4" id="grid-deals-products" style="margin-top: 0;">
+          <!-- Dynamically populated from products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1: iPHONES & PRE-OWNED (Clean 4-Card Grid)
+         ========================================================================== -->
+    <section class="campaign-section section-spacer" id="iphones">
+      <div class="site-container">
+        <!-- Hero Banner: iPhones Lineup -->
+        <div class="campaign-hero-banner">
+          <div class="campaign-hero-content">
+            <h2 class="campaign-title">iPhones: Brand New & Tested Pre-Owned</h2>
+            <p class="campaign-desc">
+              Titanium finishes, A18 Pro chipsets, 100% battery verified pre-owned devices, and compact mini phones.
+            </p>
+            <div>
+              <a href="#grid-iphones-products" class="btn btn-primary btn-sm">Explore iPhones</a>
+            </div>
+          </div>
+          <div class="campaign-hero-media">
+            <img src="/images/hero-mobile.jpg" alt="Flagship iPhones in studio" class="campaign-hero-img">
+          </div>
+        </div>
+
+        <!-- 4-Product Sub-Strip (Clean: Just Name, Price, and 1 Buy Now CTA) -->
+        <div class="product-grid-4" id="grid-iphones-products">
+          <!-- Dynamically populated from products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: SAMSUNG GALAXY & GOOGLE PIXELS (Clean 4-Card Grid)
+         ========================================================================== -->
+    <section class="campaign-section section-spacer" id="samsung">
+      <div class="site-container">
+        <!-- Hero Banner: Samsung & Pixel -->
+        <div class="campaign-hero-banner">
+          <div class="campaign-hero-content">
+            <h2 class="campaign-title">Samsung Galaxy & Google Pixel</h2>
+            <p class="campaign-desc">
+              Galaxy AI, 200MP Quad Zoom, compact Z Flip foldables, and Google Tensor G4 computational photography.
+            </p>
+            <div>
+              <a href="#grid-samsung-products" class="btn btn-primary btn-sm">Explore Android</a>
+            </div>
+          </div>
+          <div class="campaign-hero-media">
+            <img src="/images/hero-displays.jpg" alt="Samsung Galaxy S24 Ultra and Pixel" class="campaign-hero-img">
+          </div>
+        </div>
+
+        <!-- 4-Product Sub-Strip -->
+        <div class="product-grid-4" id="grid-samsung-products">
+          <!-- Dynamically populated from products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: MACBOOKS, IMACS & LAPTOPS (Clean 4-Card Grid)
+         ========================================================================== -->
+    <section class="campaign-section section-spacer" id="laptops">
+      <div class="site-container">
+        <!-- Hero Banner: MacBooks & iMacs -->
+        <div class="campaign-hero-banner">
+          <div class="campaign-hero-content">
+            <h2 class="campaign-title">MacBooks, iMacs & Laptops</h2>
+            <p class="campaign-desc">
+              M3 Max computational power, 4.5K Retina all-in-one iMacs, and Grade A+ certified pre-owned MacBooks.
+            </p>
+            <div>
+              <a href="#grid-macbooks-products" class="btn btn-primary btn-sm">Explore Macs</a>
+            </div>
+          </div>
+          <div class="campaign-hero-media">
+            <img src="/images/hero-appliances.jpg" alt="MacBook Pro and iMac Studio" class="campaign-hero-img">
+          </div>
+        </div>
+
+        <!-- 4-Product Sub-Strip -->
+        <div class="product-grid-4" id="grid-macbooks-products">
+          <!-- Dynamically populated from products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: GAMING GADGETS & TABLETS (Clean 4-Card Grid)
+         ========================================================================== -->
+    <section class="campaign-section section-spacer" id="gaming">
+      <div class="site-container">
+        <!-- Hero Banner: Gaming & Tablets -->
+        <div class="campaign-hero-banner">
+          <div class="campaign-hero-content">
+            <h2 class="campaign-title">Gaming Consoles & iPads</h2>
+            <p class="campaign-desc">
+              Sony PS5 Slim, Steam Deck OLED handhelds, iPad Pro M4 Tandem OLED, and Galaxy Tab S9 Ultra.
+            </p>
+            <div>
+              <a href="#grid-gaming-products" class="btn btn-primary btn-sm">Shop Gaming</a>
+            </div>
+          </div>
+          <div class="campaign-hero-media">
+            <img src="/images/prod-gaming-monitor.jpg" alt="Gaming Consoles and Tablets" class="campaign-hero-img">
+          </div>
+        </div>
+
+        <!-- 4-Product Sub-Strip -->
+        <div class="product-grid-4" id="grid-gaming-products">
+          <!-- Dynamically populated from products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPLORE BUYING GUIDES & TECH STORIES (Samsung 1:1 Carousel)
+         ========================================================================== -->
+    <section class="stories-section section-spacer" id="stories">
+      <div class="site-container">
+        <div class="section-header-row">
+          <div>
+            <span class="campaign-tag">QwerTech Guides</span>
+            <h2 class="section-title">Buying Guides & Quality Insights</h2>
+          </div>
+        </div>
+
+        <!-- Carousel Viewport -->
+        <div class="stories-slider-viewport" id="stories-slider-viewport">
+          <div class="stories-track" id="stories-track">
+            <!-- Dynamically populated from stories.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         GLOBAL TRUST & SERVICES STRIP
+         ========================================================================== -->
+    <section class="perks-strip-section section-spacer" id="perks">
+      <div class="site-container">
+        <div class="perks-grid">
+          <div class="perk-item">
+            <div class="perk-icon-wrap">
+              <i data-lucide="truck" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="perk-info">
+              <h4>Express Delivery</h4>
+              <p>Fast dispatch in Ilorin, Kwara State. Nationwide shipping across Nigeria.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon-wrap">
+              <i data-lucide="refresh-cw" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="perk-info">
+              <h4>Instant Device Swap</h4>
+              <p>Trade in your old phone or laptop for instant credit today.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon-wrap">
+              <i data-lucide="check-circle" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="perk-info">
+              <h4>40-Point Inspection</h4>
+              <p>100% hardware, battery & screen certified pre-owned devices.</p>
+            </div>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon-wrap">
+              <i data-lucide="shield-check" style="width: 18px; height: 18px;"></i>
+            </div>
+            <div class="perk-info">
+              <h4>Store Warranty</h4>
+              <p>Full warranty & dedicated Nigerian repair and replacement support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VIP NEWSLETTER SECTION (iPhone 18 & Weekly Deals)
+         ========================================================================== -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="newsletter-content">
+        <span class="campaign-tag">VIP Alerts</span>
+        <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 8px;">Stay Tuned for Daily Moloore & Weekly Deals</h2>
+        <p style="color: var(--color-text-muted);">
+          Get notified first for flash discounts, restocks, and iPhone 18 Nigerian launch reservations.
+        </p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+        <div id="newsletter-msg" style="margin-top: 14px; display: none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       HIGH-SIGNAL SITE FOOTER (Newsletter, Multi-Column, Payment Badges & Trust)
+       ========================================================================== -->
+  <footer class="site-footer" id="support">
+    <div class="site-container">
+      <!-- 1. Upper Utility Row: Streamlined Newsletter & Region/Currency Picker -->
+      <div class="footer-top-strip">
+        <div class="footer-newsletter-block">
+          <h4 class="footer-newsletter-heading">Stay Connected with QwerTech VIP</h4>
+          <p class="footer-newsletter-sub">Get direct flash deals, price drop alerts, and iPhone 18 launch updates in your inbox.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully! You are now enrolled in QwerTech VIP alerts.');">
+            <input type="email" class="footer-newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="footer-controls-block">
+          <div class="footer-selector-pill" title="Store Location">
+            <i data-lucide="map-pin" style="width: 16px; height: 16px; color: #0A84FF;"></i>
+            <span>Ilorin, Kwara State, Nigeria</span>
+          </div>
+          <div class="footer-selector-pill" title="Currency & Region">
+            <span>🇳🇬 Nigeria (NGN ₦)</span>
+            <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 4 Clean Structured Columns -->
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Phones & Tablets</h4>
+          <ul class="footer-links-list">
+            <li><a href="#iphones">Brand New iPhones</a></li>
+            <li><a href="#iphones">Pre-Owned iPhones (Grade A+)</a></li>
+            <li><a href="#samsung">Samsung Galaxy S24 Series</a></li>
+            <li><a href="#samsung">Google Pixel 9 Pro</a></li>
+            <li><a href="#gaming">iPad Pro M4 & Galaxy Tabs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Laptops & Gaming</h4>
+          <ul class="footer-links-list">
+            <li><a href="#laptops">MacBook Pro 16" M3 Max</a></li>
+            <li><a href="#laptops">MacBook Air 15" M3</a></li>
+            <li><a href="#laptops">iMac 24" 4.5K Retina</a></li>
+            <li><a href="#gaming">Sony PlayStation 5 Slim</a></li>
+            <li><a href="#gaming">Steam Deck OLED Handheld</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services & Perks</h4>
+          <ul class="footer-links-list">
+            <li><a href="#perks">Device Swap & Trade-In</a></li>
+            <li><a href="#perks">40-Point Diagnostic Testing</a></li>
+            <li><a href="#perks">Ilorin & Nationwide Express Dispatch</a></li>
+            <li><a href="#deals-spotlight">Daily Moloore & Weekly Deals</a></li>
+            <li><a href="#perks">Store Warranty & Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact & Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://wa.me/2348000000000" target="_blank" rel="noopener">WhatsApp Support: +234 800 QWERTECH</a></li>
+            <li><a href="#cart">View Shopping Bag</a></li>
+            <li><a href="#">Physical Store: Ilorin, Kwara State, Nigeria</a></li>
+            <li><a href="#">Hours: Mon – Sat (8:00 AM – 7:00 PM)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. Accepted Payment Badges & Security Bar -->
+      <div class="footer-trust-strip">
+        <div class="footer-payments-list">
+          <span style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-subtle); margin-right: 4px;">Accepted Payments:</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">Verve</span>
+          <span class="payment-badge">Interswitch</span>
+          <span class="payment-badge">Bank Transfer</span>
+          <span class="payment-badge">Paystack</span>
+          <span class="payment-badge">Apple Pay</span>
+          <span class="payment-badge">Cash on Delivery</span>
+        </div>
+        <div class="footer-security-badge">
+          <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+          <span>256-Bit SSL Encrypted & Verified</span>
+        </div>
+      </div>
+
+      <!-- 4. Clean Single-Line Bottom Bar with Brand Lockup -->
+      <div class="footer-bottom-bar">
+        <div class="footer-brand-lockup">
+          <img src="/images/qwertech-logo.svg" alt="QwerTech Logo" class="footer-logo-img">
+          <div class="footer-wordmark-wrap">
+            <span class="footer-brand-title">QWERTECH</span>
+            <span class="footer-brand-subtitle">Global Communications</span>
+          </div>
+        </div>
+        <div>
+          <span>Copyright © 2026 QwerTech Global Communications. All prices in Nigerian Naira (₦).</span>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="social-icon-btn" aria-label="WhatsApp"><i data-lucide="message-circle" style="width: 16px; height: 16px;"></i></a>
+          <a href="#" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram" style="width: 16px; height: 16px;"></i></a>
+          <a href="#" class="social-icon-btn" aria-label="X / Twitter"><i data-lucide="twitter" style="width: 16px; height: 16px;"></i></a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube" style="width: 16px; height: 16px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION BAR (Thumb-Friendly App Navigation)
+       ========================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+    <a href="#" class="bottom-bar-btn active" aria-label="Home">
+      <i data-lucide="home" style="width: 20px; height: 20px;"></i>
+      <span>Home</span>
+    </a>
+    <button class="bottom-bar-btn" id="mobile-bar-categories" aria-label="Categories">
+      <i data-lucide="grid" style="width: 20px; height: 20px;"></i>
+      <span>Categories</span>
+    </button>
+    <button class="bottom-bar-btn" id="mobile-bar-search" aria-label="Search">
+      <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+      <span>Search</span>
+    </button>
+    <a href="#deals-spotlight" class="bottom-bar-btn" style="color: #0A84FF;" aria-label="Moloore Deals">
+      <i data-lucide="zap" style="width: 20px; height: 20px;"></i>
+      <span>Moloore</span>
+    </a>
+    <button class="bottom-bar-btn" id="mobile-bar-bag" aria-label="Shopping Bag">
+      <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+      <span>Bag</span>
+      <span class="bottom-bar-badge cart-badge-count">1</span>
+    </button>
+  </nav>
+
+  <!-- ==========================================================================
+       SEARCH OVERLAY
+       ========================================================================== -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-container">
+      <div class="search-header">
+        <div style="display: flex; align-items: center; gap: 10px; height: 38px;">
+          <img src="/images/qwertech-logo.svg" alt="QwerTech Logo" style="height: 38px; width: auto;">
+          <div class="brand-wordmark-wrap" style="height: 38px;">
+            <span class="brand-title" style="font-size: 1.25rem;">QWERTECH</span>
+            <span class="brand-subtitle" style="font-size: 1rem;">Global Communications</span>
+          </div>
+        </div>
+        <button class="apple-close-circle-btn" id="search-close-btn" aria-label="Close search">
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+
+      <div class="search-input-wrapper">
+        <i data-lucide="search" class="search-input-icon" style="width: 24px; height: 24px;"></i>
+        <input type="text" id="search-input" class="search-bar-input" placeholder="Search iPhones, Samsungs, MacBooks, PS5, Deals..." autocomplete="off">
+        <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear search input">
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+
+      <div class="search-section-heading">Trending Searches</div>
+      <div class="search-trending-tags" id="search-trending-tags"></div>
+
+      <div class="search-section-heading">Popular Devices in Stock</div>
+      <div class="search-results-grid" id="search-results-grid"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CART DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button class="icon-btn" id="cart-close-btn" aria-label="Close shopping bag">
+          <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+        </button>
+      </div>
+
+      <div class="free-shipping-meter">
+        <p id="shipping-meter-text">Add items for Free Ilorin Delivery</p>
+        <div class="meter-bar">
+          <div class="meter-fill" id="shipping-meter-fill"></div>
+        </div>
+      </div>
+
+      <div class="cart-drawer-body" id="cart-drawer-body"></div>
+
+      <div class="cart-drawer-footer">
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; gap: 8px;">
+            <input type="text" id="promo-input" placeholder="Promo Code (e.g. QWERTECH)" style="flex: 1; height: 38px; padding: 0 12px; border: 1px solid var(--color-border); border-radius: 4px; font-size: 0.8125rem; text-transform: uppercase;">
+            <button class="btn btn-secondary btn-sm" id="promo-apply-btn">Apply</button>
+          </div>
+          <p id="promo-message" style="font-size: 0.75rem; margin-top: 4px;"></p>
+        </div>
+
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₦2,450,000</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery</span>
+          <span style="color: #0A84FF; font-weight: 500;">FREE (Ilorin)</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cart-total">₦2,450,000</span>
+        </div>
+
+        <button class="btn btn-primary" style="width: 100%; height: 48px; font-size: 1rem;" onclick="alert('Order received! A QwerTech representative will contact you via WhatsApp for instant dispatch.')">
+          Proceed to Order & Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       APPLE 1:1 PRODUCT DETAIL / BUY FLOW MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="configurator-modal">
+    <div class="modal-window">
+      <div id="config-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STORY READER MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="story-modal">
+    <div class="modal-window" style="max-width: 800px; height: auto; max-height: 90vh;">
+      <div style="padding: 16px 24px; display: flex; justify-content: flex-end; border-bottom: 1px solid #E5E5EA;">
+        <button class="apple-close-circle-btn" id="story-modal-close" aria-label="Close story">
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+      <div id="story-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

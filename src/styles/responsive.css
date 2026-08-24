@@ -1,0 +1,480 @@
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE PERFECTION (1024px, 768px, 480px, 360px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET LANDSCAPE & SMALL DESKTOP (1024px down)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding-desktop: 28px;
+    --spacing-section-desktop: 64px;
+  }
+
+  .nav-center-menu {
+    display: none !important;
+  }
+
+  .nav-mobile-toggle {
+    display: inline-flex !important;
+  }
+
+  .nav-main-bar {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .product-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .campaign-hero-banner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .campaign-hero-content {
+    padding: 36px 28px 20px;
+    text-align: left;
+  }
+
+  .campaign-hero-media {
+    min-height: 280px;
+  }
+
+  .campaign-hero-img {
+    max-height: 280px;
+  }
+
+  .perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .search-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLET PORTRAIT & MOBILE SCREENS (768px down)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --container-padding-desktop: 16px;
+    --spacing-section-desktop: 40px;
+  }
+
+  /* Header & Logo */
+  .site-header {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .nav-main-bar {
+    height: 60px;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .brand-logo-img {
+    height: 32px;
+  }
+
+  .brand-wordmark-wrap {
+    height: 32px;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Reduced Promo Copy Size on Mobile */
+  .nav-promo-bar {
+    height: 28px !important;
+    font-size: 0.625rem !important;
+  }
+
+  .nav-promo-ticker {
+    font-size: 0.625rem !important;
+    padding: 0 8px;
+    letter-spacing: -0.01em;
+  }
+
+  /* Hero Multi-Slide: Clean H1, No Body Copy on Mobile */
+  .hero-slider-section,
+  .hero-slider-viewport {
+    min-height: 420px;
+  }
+
+  .hero-slide-content {
+    padding: 32px 16px 40px;
+  }
+
+  .hero-slide-title {
+    font-size: 24px !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .hero-slide-subtitle {
+    display: none !important; /* Removed body copy on mobile */
+  }
+
+  .hero-slide-content .btn-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 8px;
+  }
+
+  .hero-slide-content .btn {
+    width: 100%;
+    height: 42px;
+    font-size: 0.875rem;
+  }
+
+  .hero-slider-nav {
+    bottom: 14px;
+    padding: 4px 10px;
+  }
+
+  .hero-dot {
+    width: 16px;
+    height: 3px;
+  }
+
+  .hero-dot.active {
+    width: 24px;
+  }
+
+  /* Deals Section on Mobile */
+  .deals-spotlight-section {
+    padding: 32px 0 40px;
+  }
+
+  .deals-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .deals-tabs {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 2px;
+    justify-content: flex-start;
+  }
+
+  .deals-tab-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* Product Cards: Clean 2-Column Mobile Grid */
+  .product-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .product-card {
+    height: 330px;
+    padding: 14px 10px 12px;
+  }
+
+  .product-card-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.58rem;
+    padding: 3px 6px;
+  }
+
+  .product-card-image-wrap {
+    height: 135px;
+    margin-bottom: 6px;
+  }
+
+  .product-card-image {
+    max-height: 120px;
+  }
+
+  .product-card-title {
+    font-size: 0.8125rem;
+    height: 34px;
+    margin-bottom: 4px;
+  }
+
+  .product-card-price {
+    font-size: 0.8125rem;
+    height: 20px;
+  }
+
+  .product-card-price .original-price {
+    font-size: 0.6875rem;
+  }
+
+  .product-card-actions .btn-buy-now {
+    height: 34px;
+    font-size: 0.75rem;
+  }
+
+  /* Campaign Banners on Mobile: Header on top, Image directly below (No body copy) */
+  .campaign-hero-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-grey-100);
+    padding: 20px 14px 14px;
+    min-height: auto;
+  }
+
+  .campaign-hero-content {
+    padding: 0 0 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .campaign-title {
+    font-size: 19px !important;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+
+  .campaign-desc {
+    display: none !important; /* Removed body copy on mobile */
+  }
+
+  .campaign-hero-content div:has(.btn),
+  .campaign-hero-content a.btn {
+    display: none !important; /* Clean visual focus on header and image */
+  }
+
+  .campaign-hero-media {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .campaign-hero-img {
+    max-height: 190px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Stories Carousel on Mobile */
+  .stories-section {
+    padding: 8px 0;
+  }
+
+  .stories-track {
+    gap: 12px;
+  }
+
+  .story-card {
+    width: 240px;
+  }
+
+  .story-card-thumb {
+    height: 140px;
+  }
+
+  .story-card-body {
+    padding: 12px;
+  }
+
+  /* Perks Strip on Mobile */
+  .perks-strip-section {
+    padding: 24px 0;
+  }
+
+  .perks-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .perk-item {
+    align-items: center;
+  }
+
+  /* Newsletter on Mobile */
+  .newsletter-section {
+    padding: 40px 14px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .newsletter-input,
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  /* High-Signal Footer on Mobile */
+  .site-footer {
+    padding: 36px 0 76px; /* Extra bottom padding for mobile bottom bar */
+  }
+
+  .footer-top-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .footer-newsletter-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-newsletter-input,
+  .footer-newsletter-form .btn {
+    width: 100%;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .footer-trust-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  /* Mobile App Bottom Bar: Icon-Only (No text labels) */
+  .mobile-bottom-bar {
+    display: flex;
+    height: 52px;
+    padding: 0 4px;
+  }
+
+  .bottom-bar-btn {
+    height: 50px;
+    min-width: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .bottom-bar-btn span {
+    display: none !important; /* No text labels on mobile bottom bar */
+  }
+
+  .bottom-bar-btn i {
+    width: 22px;
+    height: 22px;
+  }
+
+  .bottom-bar-badge {
+    top: 6px;
+    right: 8px;
+  }
+
+  /* Apple 1:1 Product Detail Modal on Mobile */
+  .modal-window {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .apple-pdp-subnav {
+    height: 46px;
+    padding: 0 14px;
+  }
+
+  .apple-pdp-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 14px 14px 40px;
+  }
+
+  .apple-pdp-hero-image-wrap {
+    height: 240px;
+    padding: 12px;
+  }
+
+  .apple-pdp-hero-image {
+    max-height: 200px;
+  }
+
+  .apple-pdp-main-h1 {
+    font-size: 22px;
+  }
+
+  .apple-storage-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .apple-tradein-options {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SMALL SMARTPHONES (400px down)
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+  .brand-wordmark-wrap .brand-subtitle {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-logo-img {
+    height: 28px;
+  }
+
+  .product-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    height: auto;
+    min-height: 310px;
+  }
+
+  .product-card-image-wrap {
+    height: 150px;
+  }
+}

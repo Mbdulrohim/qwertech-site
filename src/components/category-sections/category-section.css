@@ -1,0 +1,66 @@
+/* Category Sections (iPhones, Samsung, MacBooks, Gaming) Styles */
+.campaign-section {
+  width: 100%;
+}
+
+.campaign-hero-banner {
+  position: relative;
+  min-height: 480px;
+  background-color: var(--color-grey-100);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-banner);
+}
+
+.campaign-hero-content {
+  padding: 48px 56px;
+  z-index: 2;
+}
+
+.campaign-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0A84FF;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.campaign-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.campaign-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  max-width: 460px;
+  margin-bottom: 24px;
+  line-height: 1.45;
+}
+
+.campaign-hero-media {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campaign-hero-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.campaign-hero-banner:hover .campaign-hero-img {
+  transform: scale(1.02);
+}

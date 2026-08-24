@@ -1,0 +1,249 @@
+/* ==========================================================================
+   HIGH-SIGNAL FOOTER COMPONENT
+   ========================================================================== */
+.site-footer {
+  background-color: #F8F8FA;
+  border-top: 1px solid var(--color-border);
+  padding: 64px 0 32px;
+  font-size: 0.8125rem;
+  width: 100%;
+}
+
+/* 1. Upper Utility Row: Streamlined Newsletter + Region/Currency Picker */
+.footer-top-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter-block {
+  max-width: 480px;
+  flex: 1;
+}
+
+.footer-newsletter-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.footer-newsletter-sub {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.footer-newsletter-input {
+  flex: 1;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  font-size: 0.8125rem;
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  transition: border-color var(--duration-fast);
+}
+
+.footer-newsletter-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Region & Currency Selector */
+.footer-controls-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-selector-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background-color: var(--color-surface);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: border-color var(--duration-fast), background-color var(--duration-fast);
+}
+
+.footer-selector-pill:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-grey-100);
+}
+
+/* 2. Middle Navigation Grid */
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list a {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  transition: color var(--duration-fast);
+}
+
+.footer-links-list a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* 3. Accepted Payment Badges & Security Bar */
+.footer-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: 28px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-payments-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  letter-spacing: 0.02em;
+}
+
+.footer-security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2E7D32;
+  background-color: #E8F5E9;
+  padding: 6px 14px;
+  border-radius: var(--radius-button);
+}
+
+/* 4. Footer Bottom Bar with Brand Lockup */
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text-subtle);
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 38px;
+}
+
+.footer-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.footer-wordmark-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 38px;
+  text-align: left;
+}
+
+.footer-brand-title {
+  font-family: var(--font-brand);
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.footer-brand-subtitle {
+  font-family: var(--font-script);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 0.95;
+  margin-top: 1px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  color: var(--color-grey-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: color var(--duration-fast), background-color var(--duration-fast);
+}
+
+.social-icon-btn:hover {
+  color: var(--color-primary);
+  background-color: var(--color-grey-200);
+}
