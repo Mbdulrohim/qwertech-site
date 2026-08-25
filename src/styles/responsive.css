@@ -9,7 +9,7 @@
 @media (max-width: 1024px) {
   :root {
     --container-padding-desktop: 28px;
-    --spacing-section-desktop: 64px;
+    --spacing-section-desktop: 12px;
   }
 
   .nav-center-menu {
@@ -69,7 +69,7 @@
 @media (max-width: 768px) {
   :root {
     --container-padding-desktop: 16px;
-    --spacing-section-desktop: 40px;
+    --spacing-section-desktop: 12px;
   }
 
   /* =========================================

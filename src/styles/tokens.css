@@ -34,9 +34,9 @@
   --font-script: 'Style Script', cursive;
 
   /* Spacing Rhythm */
-  --spacing-section-desktop: 120px;
-  --spacing-section-tablet: 80px;
-  --spacing-section-mobile: 56px;
+  --spacing-section-desktop: 12px;
+  --spacing-section-tablet: 12px;
+  --spacing-section-mobile: 12px;
 
   --spacing-gutter: 24px;
   --container-max-width: 1280px;
