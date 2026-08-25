@@ -446,23 +446,6 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         VIP NEWSLETTER SECTION (iPhone 18 & Weekly Deals)
-         ========================================================================== -->
-    <section class="newsletter-section" id="newsletter">
-      <div class="newsletter-content">
-        <span class="campaign-tag">VIP Alerts</span>
-        <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 8px;">Stay Tuned for Daily Moloore & Weekly Deals</h2>
-        <p style="color: var(--color-text-muted);">
-          Get notified first for flash discounts, restocks, and iPhone 18 Nigerian launch reservations.
-        </p>
-        <form class="newsletter-form" id="newsletter-form">
-          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email address" required>
-          <button type="submit" class="btn-subscribe">Subscribe</button>
-        </form>
-        <div id="newsletter-msg" style="margin-top: 14px; display: none;"></div>
-      </div>
-    </section>
   </main>
 
   <!-- ==========================================================================
@@ -475,10 +458,11 @@
         <div class="footer-newsletter-block">
           <h4 class="footer-newsletter-heading">Stay Connected with QwerTech VIP</h4>
           <p class="footer-newsletter-sub">Get direct flash deals, price drop alerts, and iPhone 18 launch updates in your inbox.</p>
-          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully! You are now enrolled in QwerTech VIP alerts.');">
-            <input type="email" class="footer-newsletter-input" placeholder="Enter your email address" required>
+          <form class="footer-newsletter-form" id="newsletter-form">
+            <input type="email" class="footer-newsletter-input" id="newsletter-email" placeholder="Enter your email address" required>
             <button type="submit" class="btn-subscribe">Subscribe</button>
           </form>
+          <div id="newsletter-msg" style="margin-top: 10px; display: none;"></div>
         </div>
 
         <div class="footer-controls-block">
