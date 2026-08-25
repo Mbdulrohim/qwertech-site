@@ -6,7 +6,8 @@
 .campaign-hero-banner {
   position: relative;
   min-height: 480px;
-  background-color: var(--color-grey-100);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   align-items: center;
