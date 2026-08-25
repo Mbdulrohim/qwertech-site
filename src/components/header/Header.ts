@@ -19,10 +19,6 @@ export function initHeader(): void {
   const mobileDrawerClose = document.getElementById('mobile-drawer-close');
   const promoTickerEl = document.getElementById('nav-promo-ticker');
 
-  // Mobile Bottom Bar buttons
-  const mobileBarCategories = document.getElementById('mobile-bar-categories');
-  const mobileBarSearch = document.getElementById('mobile-bar-search');
-  const mobileBarBag = document.getElementById('mobile-bar-bag');
   const searchOpenBtn = document.getElementById('search-open-btn');
   const cartOpenBtn = document.getElementById('cart-open-btn');
 
@@ -141,22 +137,12 @@ export function initHeader(): void {
   }
 
   mobileToggleBtn?.addEventListener('click', openMobileDrawer);
-  mobileBarCategories?.addEventListener('click', openMobileDrawer);
   mobileDrawerClose?.addEventListener('click', closeMobileDrawer);
 
   mobileDrawer?.addEventListener('click', (e) => {
     if (e.target === mobileDrawer) {
       closeMobileDrawer();
     }
-  });
-
-  // Mobile Bottom Bar Actions
-  mobileBarSearch?.addEventListener('click', () => {
-    searchOpenBtn?.click();
-  });
-
-  mobileBarBag?.addEventListener('click', () => {
-    cartOpenBtn?.click();
   });
 
   // Mobile Accordion Items
