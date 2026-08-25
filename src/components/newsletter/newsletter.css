@@ -40,7 +40,7 @@
   font-size: 0.9375rem;
   background: transparent;
   color: var(--color-text-main);
-  min-width: 0; /* Prevents flex overflow */
+  min-width: 0;
 }
 
 .newsletter-input::placeholder {
@@ -66,30 +66,39 @@
   background-color: #222222;
 }
 
-/* Mobile — keep row layout, just tighten padding */
+/* ----------- Mobile: just the form, nothing else ----------- */
 @media (max-width: 768px) {
   .newsletter-section {
-    padding: 44px 20px;
+    padding: 24px 16px;
+    text-align: left;
   }
 
   .newsletter-content {
     max-width: 100%;
   }
 
+  /* Hide tag, heading, and description — keep only the form */
+  .newsletter-content .campaign-tag,
+  .newsletter-content h2,
+  .newsletter-content > p {
+    display: none !important;
+  }
+
   .newsletter-form {
+    margin-top: 0;
     max-width: 100%;
     border-radius: 12px;
   }
 
   .newsletter-input {
     height: 45px;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     padding: 0 14px;
   }
 
   .newsletter-form .btn-subscribe {
     height: 45px;
     padding: 0 18px;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 }
