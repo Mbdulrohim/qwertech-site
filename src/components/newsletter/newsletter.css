@@ -1,4 +1,4 @@
-/* VIP Newsletter Styles */
+/* VIP Newsletter Section */
 .newsletter-section {
   text-align: center;
   padding: 64px 20px;
@@ -6,30 +6,90 @@
 }
 
 .newsletter-content {
-  max-width: 520px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
 .newsletter-form {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   margin-top: 20px;
-  max-width: 440px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-surface);
+  transition: border-color var(--duration-fast);
+}
+
+.newsletter-form:focus-within {
+  border-color: var(--color-primary);
 }
 
 .newsletter-input {
   flex: 1;
-  height: 44px;
+  height: 45px;
   padding: 0 16px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-input);
+  border: none;
+  border-radius: 0;
   outline: none;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  background: transparent;
+  color: var(--color-text-main);
+  min-width: 0; /* Prevents flex overflow */
 }
 
-.newsletter-input:focus {
-  border-color: var(--color-primary);
+.newsletter-input::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.newsletter-form .btn-subscribe {
+  flex-shrink: 0;
+  height: 45px;
+  padding: 0 22px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color var(--duration-fast);
+  white-space: nowrap;
+}
+
+.newsletter-form .btn-subscribe:hover {
+  background-color: #222222;
+}
+
+/* Mobile — keep row layout, just tighten padding */
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding: 44px 20px;
+  }
+
+  .newsletter-content {
+    max-width: 100%;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .newsletter-input {
+    height: 45px;
+    font-size: 0.875rem;
+    padding: 0 14px;
+  }
+
+  .newsletter-form .btn-subscribe {
+    height: 45px;
+    padding: 0 18px;
+    font-size: 0.8125rem;
+  }
 }
